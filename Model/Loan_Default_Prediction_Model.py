@@ -55,9 +55,8 @@ if predict_button:
     scaled_numerical = scaler.transform(user_inputs[["person_age", "person_income", "person_emp_length", "loan_amnt",
                                                  "loan_int_rate", "loan_percent_income", "cb_person_cred_hist_length"]])
 
-    # Convert encoded features to a DataFrame with descriptive column names
-    encoded_feature_names = encoder.get_feature_names_out(["person_home_ownership", "loan_intent", "loan_grade", "cb_person_default_on_file"])
-    encoded_features_df = pd.DataFrame(encoded_features, columns=encoded_feature_names)
+    # Convert encoded features to a DataFrame
+    encoded_features_df = pd.DataFrame(encoded_features)
 
     # Convert scaled numerical features to a DataFrame with descriptive column names
     scaled_numerical_df = pd.DataFrame(scaled_numerical, columns=["person_age", "person_income", "person_emp_length", "loan_amnt",

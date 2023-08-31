@@ -1,6 +1,14 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
+
+# Construct the path to pickled files using the script's directory
+script_dir = os.path.dirname(__file__)
+encoder_path = os.path.join(script_dir, "encoder.pkl")
+scaler_path = os.path.join(script_dir, "scaler.pkl")
+model_path = os.path.join(script_dir, "Loan_default_model.pkl")
+
 
 # Load the pickled encoder, scaler, and model
 encoder = joblib.load("encoder.pkl")

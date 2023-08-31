@@ -11,9 +11,9 @@ model_path = os.path.join(script_dir, "Loan_default_model.pkl")
 
 
 # Load the pickled encoder, scaler, and model
-encoder = joblib.load("encoder.pkl")
-scaler = joblib.load("scaler.pkl")
-xgb_model = joblib.load("Loan_default_model.pkl")
+encoder = joblib.load(encoder_path)
+scaler = joblib.load(scaler_path)
+xgb_model = joblib.load(model_path)
 
 # Streamlit app
 st.title("Loan Default Prediction App")
